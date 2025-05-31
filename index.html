@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maxidata - Smart Internet for Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: #0066cc;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1549924231-f129b911e442') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background: #ffcc00;
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background: #e6b800;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .features,
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+      flex: 1 1 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #0066cc;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact button {
+      padding: 12px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003366;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+
+      .features,
+      .testimonials {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Maxidata</h1>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Smart Internet for Business</h2>
+    <p style="color: rgb(0, 0, 0);">Grow your business with high-speed, affordable and reliable internet from Maxidata
+    </p>
+    <button onclick="scrollToContact()">Get Started</button>
+  </section>
+
+  <section id="features">
+    <h2>Why Choose Maxidata?</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Fast Connection</h3>
+        <p>Lightning-speed broadband built for entrepreneurs and digital professionals.</p>
+      </div>
+      <div class="card">
+        <h3>Reliable Support</h3>
+        <p>24/7 customer care to keep your business online always.</p>
+      </div>
+      <div class="card">
+        <h3>Affordable Plans</h3>
+        <p>Flexible packages designed for startups, SMEs, and growing businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="card">
+        <p>"Maxidata gave us the connectivity we needed to launch our online services."</p>
+        <strong>- Coder Gideon </strong>
+      </div>
+      <div class="card">
+        <p>"No downtime, no stress. Maxidata is the best internet provider in Jos!"</p>
+        <strong>- Nwankwo Vincent</strong>
+      </div>
+      <div class="card">
+        <p>"Affordable and efficient. Maxidata helped us grow our remote team."</p>
+        <strong>- Chinedu Paul</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Maxidata Telecommunications. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToContact() {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('Thank you for contacting Maxidata. We will get back to you soon!');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+
+</html>
